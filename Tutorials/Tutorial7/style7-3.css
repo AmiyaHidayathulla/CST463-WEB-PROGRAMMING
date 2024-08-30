@@ -1,0 +1,13 @@
+a:hover, a:active {
+    background-color: green;
+}
+
+ol li{
+    list-style-type: square;
+}
+
+body {
+    background-image: url(flower-.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
