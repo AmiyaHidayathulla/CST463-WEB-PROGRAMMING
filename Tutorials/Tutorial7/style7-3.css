@@ -11,3 +11,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+table {
+    border-left: 2px dashed;
+    border-right: 2px dashed;
+    border-top: 4px double;
+    border-bottom: 4px double;
+    padding: 10px;
+}
