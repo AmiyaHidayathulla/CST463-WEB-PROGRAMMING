@@ -1,0 +1,19 @@
+a:hover, a:active {
+    background-color: yellow;
+}
+
+ol li{
+    list-style-type: lower-alpha;
+}
+
+body {
+    background-image: url('pexels-photoklickr-78359-244517.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 3%;
+    
+    
+}
+body{
+    border: 4px dotted black;
+}
