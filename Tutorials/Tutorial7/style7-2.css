@@ -1,0 +1,14 @@
+a {
+    background-color: red;
+    font-style: italic;
+    color: white;
+}
+
+ul {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+body {
+    background-image: url(ocean2.gif);
+    background-repeat: no-repeat;
+}
