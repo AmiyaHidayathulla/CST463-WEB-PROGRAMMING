@@ -4,36 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Reg.</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #reg, #login {
+            border: none;
+            color: white;
+            padding: 20px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+        }
+        #reg {
+            background-color: #04aa28;
+        }
+        #login {
+            background-color: #1204aa;
+        }
+    </style>
 </head>
-<style>
-    h1{
-        text-align: center;
-    }
-    #reg{
-        background-color: #04aa28;
-        border: none;
-        color: white;
-        padding: 20px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        
-    }
-    #login{
-        background-color: #1204aa; 
-        border: none;
-        color: white;
-        padding: 20px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-    }
-</style>
 <body>
-    <h1>Welcome</h1>
-    <button id="reg" onclick="window.location.href = 'reg.html';">New Registration</button>
-    <button id="login" onclick="window.location.href = 'login.html';">Login</button>
+    <div class="button-container">
+        <h1>Welcome</h1>
+        <button id="reg" onclick="window.location.href = 'reg.html';">New Registration</button>
+        <button id="login" onclick="window.location.href = 'login.html';">Login</button>
+    </div>
 </body>
 </html>
