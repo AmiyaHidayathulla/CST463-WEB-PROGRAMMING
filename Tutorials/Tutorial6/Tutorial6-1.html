@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function validate()
+        {
+            var name = document.forms["formNew"]["name"].value;
+            var password = document.forms["formNew"]["password"].value;
+
+            if(name== "")
+            {
+                alert("username must not be blank!");
+                return false;
+            }
+
+            if(password.length < 6){
+                alert("Password must be atleast 6 characters!");
+                return false;
+            }
+            alert("Successfully logged in!")
+            return true;
+        }
+    </script>
+    <form action="" name="formNew">
+        <table align="center">
+            <caption><h2>Login Page</h2></caption>
+            <tr>
+                <th><label for="name">Username: </label></th>
+                <td><input type="text" id="name"></td>
+            </tr>
+            <br>
+            <tr>
+                <th><label for="password">Password: </label></th>
+                <td><input type="password" id="password"></td>
+            </tr>
+            <tr>
+                <th><input type="button" value="Submit"  onclick="return validate()"></th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
