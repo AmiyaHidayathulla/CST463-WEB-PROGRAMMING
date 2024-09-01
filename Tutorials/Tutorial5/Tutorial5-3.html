@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gross Salary of 3 employees</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function GrossSalary(hours,Rate) {
+            var regularHours = 40;
+            var overtimeRate = 1.5;
+            var grossPay;
+
+            if (hours <= regularHours) {
+                grossPay = hours * Rate;
+            } 
+            else {
+                var overtimeHours = hours - regularHours;
+                grossPay = (regularHours * Rate) + (overtimeHours * Rate * overtimeRate);
+            }
+
+            return grossPay;
+        }
+
+        for (var i = 1; i <= 3; i++) {
+            var empName = prompt("Enter the name of employee " + i + ": ");
+            var hours = parseFloat(prompt("Enter the number of hours worked by " + empName + " last week: "));
+            var Rate = parseFloat(prompt("Enter the hourly rate of " + empName + ": "));
+            
+            var grossPay = GrossSalary(hours,Rate);
+            document.write("<p>" + empName + "'s gross pay is " + grossPay.toFixed(2) + "</p>");
+        }
+    </script>
+</body>
+</html>
