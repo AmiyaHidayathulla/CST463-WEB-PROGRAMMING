@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Check</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function palindrome(num)
+        {
+            var number = parseInt(num);
+             var original = number;
+             var newNum = 0;
+            while(number!=0){
+                var rem = number%10;
+                newNum = newNum*10 + rem;
+                number = Math.floor(number / 10);
+            }
+            if(newNum==original){
+                return " a palindrome";
+            }
+            else{
+                return "not a palindrome" ;
+            }
+        }
+
+
+        var num = prompt("Enter a 5 digit number: ","");
+        while(true)
+            {
+                if(num.length!=5)
+                {
+                    alert("Not a 5 digit number\n")
+                    num = prompt("Enter a 5 digit number: ","");
+                }
+                else{
+                    break;
+                }
+            }
+        var result = palindrome(num);
+        alert("Given number "+num+ " is "+ result);
+    </script>
+</body>
+</html>
