@@ -94,6 +94,7 @@ body {
     background-color: black;
     padding-top: 4em;
     padding-bottom: 5em;
+    position: relative;
 }
 
 .container {
@@ -149,6 +150,26 @@ body {
     line-height: 1.2; /* Adjust line height for better spacing */
 }
 
+.connect-button {
+    position: absolute;
+    bottom: 180px;
+    right: 90px;
+    background-color: #ff6347; /* Tomato color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.connect-button:hover {
+    background-color: #ff4500; /* Darker orange on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .col-md-6 {
@@ -159,6 +180,11 @@ body {
 
     .text-container {
         padding-left: 0;
+    }
+
+    .connect-button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
     }
 }
 
@@ -486,4 +512,65 @@ body {
 .contact-map iframe {
     border: none;
     border-radius: 5px;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form
+     {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .contact-map{
+        max-width: 100%;
+        padding: 10px;
+    }
+    .contact-form button.submit-btn {
+        font-size: 1rem;
+    }
+}
+
+/* Connect me section */
+.connect-section {
+    padding: 50px 0;
+    background-color: black;
+    text-align: center;
+}
+
+.connect-section h2 {
+    color: #ff6347;
+    font-family: 'Verdana, Geneva, Tahoma, sans-serif';
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.connect-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.connect-icons a {
+    color: #fff;
+    font-size: 3.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.connect-icons a:hover {
+    color: #ff6347;
+    transform: scale(1.2);
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .connect-icons a {
+        font-size: 2.5rem;
+        margin: 0 15px;
+    }
 }
