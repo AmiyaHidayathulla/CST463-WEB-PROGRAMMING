@@ -30,6 +30,7 @@
 
 <!-- Signup Form Section -->
 <section id="signup" class="signup-section">
+    
     <div class="container">
         <h2>Registration Form</h2>
         <form action="#" class="signup-form">
@@ -127,11 +128,34 @@
     </div>
 </section>
 
-</body>
-</html>
+<script>
+    const toggleButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navLinkItems = document.querySelectorAll('.nav-links li a');
 
-</body>
-</html>
+    // Toggle the mobile menu when the button is clicked
+    toggleButton.addEventListener('click', (event) => {
+        navLinks.classList.toggle('active');
+        event.stopPropagation(); // Prevent the event from bubbling up to the document click listener
+    });
+
+    // Close the mobile menu when a navigation link is clicked
+    navLinkItems.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Close the mobile menu when clicking anywhere outside the navbar
+    document.addEventListener('click', (event) => {
+        const isClickInsideMenu = navLinks.contains(event.target);
+        const isClickInsideToggle = toggleButton.contains(event.target);
+
+        if (!isClickInsideMenu && !isClickInsideToggle) {
+            navLinks.classList.remove('active'); // Close the menu
+        }
+    });
+</script>
 
 
    
