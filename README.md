@@ -3,3 +3,6 @@
 
 Links for all the pages:
 https://amiyahidayathulla.github.io/CST463-WEB-PROGRAMMING/mypage.html
+
+My Portfolio Link:
+https://amiyahidayathulla.github.io/CST463-WEB-PROGRAMMING/Assignment/index.html
