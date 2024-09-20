@@ -185,11 +185,13 @@ body {
     .connect-button {
         font-size: 0.9rem;
         padding: 8px 16px;
+        
     }
 }
 
 
 /* About Me Section Styles */
+/* About Me Section */
 .about-section {
     padding-top: 5em;
     padding-bottom: 4em;
@@ -198,7 +200,7 @@ body {
 }
 
 .text-center {
-    text-align: left; /* Align text to the left */
+    text-align: left; /* Align text to the left by default */
     color: #ff6347; /* Color for the heading */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 3rem; /* Size of the heading text */
@@ -246,18 +248,95 @@ body {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+    /* Stack the heading and content vertically */
+    .row {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .h1-container {
+        order: 1; /* Ensure heading appears first */
+        text-align: center; /* Center the heading in mobile view */
+        justify-content: center; /* Align horizontally to center */
+        width: 100%; /* Ensure the heading container takes full width */
+    }
+
     .text-center {
         font-size: 1.5rem; /* Adjust size for smaller screens */
-        text-align: center; /* Center text on small screens */
         margin-right: 0; /* Remove right margin on small screens */
+        margin-bottom: 1.5em; /* Add some space below the heading */
+        text-align: center; /* Center-align text for mobile */
     }
 
     .about-content {
+        order: 2; /* Ensure content appears after heading */
         padding: 0; /* Remove padding on small screens */
     }
 
     .about-content h3 {
         font-size: 1.5rem; /* Adjust size for smaller screens */
+    }
+}
+
+
+
+/* Personal information */
+/* Personal Information Section Styling */
+.personal-info-section {
+    padding: 4em 0;
+    background-color: black;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+}
+
+.personal-details h2 {
+    font-size: 2.5rem;
+    color: #ff6347; /* Tomato color for heading */
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.personal-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.personal-details li {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.personal-details li i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+    color: #ff6347; /* Tomato color for icons */
+}
+
+/* Right Side - Circular Image */
+.personal-photo img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%; /* Circular shape */
+    border: 5px solid #ff6347; /* Tomato color border */
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .personal-details {
+        text-align: center;
+    }
+
+    .personal-photo img {
+        margin-top: 20px;
     }
 }
 
