@@ -354,9 +354,11 @@ body {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 15px;
+    grid-row-gap: 0.1px; /* Controls the gap between rows */
+    grid-column-gap: 10px; /* Controls the gap between columns */
     padding: 0 20px;
 }
+
 
 .gallery-item {
     position: relative;
@@ -411,4 +413,77 @@ body {
 
 .close-lightbox:hover {
     color: #f1f1f1;
+}
+
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 0;
+    background-color: black;
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 3rem;
+    color: #ff6347;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3rem;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-form {
+    flex: 1;
+    padding: 20px;
+    max-width: 50%;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button.submit-btn {
+    padding: 10px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.contact-form label{
+    color: white;
+}
+.contact-form button.submit-btn:hover {
+    background-color: #ff4500;
+}
+
+.contact-map {
+    flex: 1;
+    padding: 20px;
+    max-width: 50%;
+}
+
+.contact-map iframe {
+    border: none;
+    border-radius: 5px;
 }
