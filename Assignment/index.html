@@ -102,6 +102,67 @@
     </div>
 </section>
 
+<!-- Education Section -->
+<section id="education" class="education-section">
+    <div class="container">
+        <h2 class="section-title">Education</h2>
+
+        <!-- Carousel Wrapper -->
+        <div class="carousel-wrapper">
+            <!-- Left Arrow -->
+            <button class="carousel-arrow left-arrow" onclick="moveCard(-1)">&#10094;</button>
+
+            <!-- Cards Wrapper -->
+            <div class="carousel-inner">
+                <!-- Education Card 1 -->
+                <div class="education-card">
+                    <div class="card">
+                        <img src="sjcet.jpg" alt="Institute 1" class="card-img">
+                        <div class="card-content">
+                            <h4>St. Joseph's College of Engineering and Technology, Palai</h4>
+                            <p>2021 - 2025</p>
+                            <button class="read-more-btn" onclick="toggleDescription(this)">Learn More</button>
+                            <p class="description">I am currently pursuing a B.Tech in Computer Science at St. Joseph's College of Engineering, Palai. My focus is on frontend development and AI-powered projects.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Card 2 -->
+                <div class="education-card">
+                    <div class="card">
+                        <img src="stmarys2.jpeg" alt="Institute 2" class="card-img">
+                        <div class="card-content">
+                            <h4>St Mary's Higher Secondary School Bharananganam, Palai</h4>
+                            <p>2019 - 2021</p>
+                            <button class="read-more-btn" onclick="toggleDescription(this)">Learn More</button>
+                            <p class="description">Completed higher secondary education with a focus on science and mathematics.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Card 3 -->
+                <div class="education-card">
+                    <div class="card">
+                        <img src="alphonsa.avif" alt="Institute 3" class="card-img">
+                        <div class="card-content">
+                            <h4>St Alphonsa Public School & Junior College, Aruvithura</h4>
+                            <p>2006 - 2019</p>
+                            <button class="read-more-btn" onclick="toggleDescription(this)">Learn More</button>
+                            <p class="description">Completed primary and secondary education with a focus on foundational studies.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Arrow -->
+            <button class="carousel-arrow right-arrow" onclick="moveCard(1)">&#10095;</button>
+        </div>
+    </div>
+</section>
+
+
+
 
 
 <section class="skills" id="skills">
@@ -362,6 +423,37 @@
                 navLinks.classList.remove('active'); // Close the menu
             }
         });
+
+
+        /* Education section */
+        let currentCardIndex = 0;
+
+        // Function to move between cards
+        function moveCard(direction) {
+            const cards = document.querySelectorAll('.education-card');
+            const totalCards = cards.length;
+            
+            // Calculate new index
+            currentCardIndex += direction;
+        
+            // Loop back if reaching the end or start
+            if (currentCardIndex >= totalCards) {
+                currentCardIndex = 0;
+            } else if (currentCardIndex < 0) {
+                currentCardIndex = totalCards - 1;
+            }
+        
+            // Translate the carousel to the new position
+            document.querySelector('.carousel-inner').style.transform = `translateX(-${currentCardIndex * 100}%)`;
+        }
+        
+        // Function to toggle description when "Learn More" is clicked
+        function toggleDescription(button) {
+            const description = button.nextElementSibling;
+            description.style.display = description.style.display === 'block' ? 'none' : 'block';
+        }
+        
+
     </script>
     
     
