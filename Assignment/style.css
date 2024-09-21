@@ -350,9 +350,10 @@ body {
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #ff6347; /* Tomato color for heading */
     margin-bottom: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .carousel-wrapper {
