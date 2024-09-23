@@ -318,7 +318,7 @@ body {
 .personal-photo img {
     max-width: 250px;
     height: auto;
-    border-radius: 50%; /* Circular shape */
+    border-radius: 10%; /* Circular shape */
     border: 5px solid #ff6347; /* Tomato color border */
     display: block;
     margin: 0 auto; /* Center the image */
