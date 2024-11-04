@@ -1,0 +1,108 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+
+body { 
+    font-family: 'Arial', sans-serif; 
+    background-color: #f4f4f4; 
+    padding-top: 70px; 
+    /* Add padding-bottom to prevent content from being hidden behind fixed footer */
+    padding-bottom: 60px;
+} 
+
+.navbar { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px 30px; 
+    background-color: black; 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; 
+} 
+
+.logo h1{ 
+    text-decoration: none; 
+    font-size: 2rem; 
+    font-weight: bolder; 
+    color: white; 
+} 
+
+.nav-links { 
+    display: flex; 
+    list-style: none; 
+} 
+
+.nav-links li { 
+    margin: 0 20px; 
+} 
+
+.nav-links a { 
+    display: block; 
+    text-decoration: none; 
+    color: white; 
+    font-size: 1.2rem; 
+    padding: 10px; 
+    transition: color 0.3s ease; 
+    text-align: center;
+} 
+
+.nav-links a:hover { 
+    color:#ff6347; 
+} 
+
+.menu-toggle { 
+    display: none; 
+    color: white; 
+    font-size: 2rem; 
+    cursor: pointer; 
+} 
+
+@media (max-width: 768px) { 
+    .nav-links { 
+        position: absolute; 
+        top: 70px; 
+        right: 0; 
+        height: 100vh; 
+        width: 100%; 
+        background-color: black; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        transform: translateX(100%); 
+        transition: transform ease-in; 
+    } 
+    
+    .nav-links.active { 
+        transform: translateX(0); 
+    } 
+    
+    .nav-links li { 
+        margin: 20px 0; 
+    } 
+    
+    .menu-toggle { 
+        display: block; 
+    } 
+} 
+
+/* Footer Section */ 
+.footer-section { 
+    background-color: black; 
+    color: white; 
+    text-align: center; 
+    padding: 20px 0; 
+    font-size: 1rem;
+    position: fixed;  /* Changed from absolute to fixed */
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;  /* Added z-index to ensure footer stays on top */
+} 
+
+.footer-section p { 
+    margin: 0; 
+}

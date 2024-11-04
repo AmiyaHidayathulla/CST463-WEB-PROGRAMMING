@@ -1,0 +1,107 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h2 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Filter and Sort Buttons */
+.filter-sort-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.filter-sort-buttons a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.filter-sort-buttons a:hover {
+    text-decoration: underline;
+}
+
+/* Task List */
+.tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Individual Task */
+.task {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+}
+.task h3 {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: #333;
+}
+.task p {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Completed Task Styling */
+.task.task-completed {
+    background-color: #e0ffe0;
+    color: #555;
+    text-decoration: line-through;
+}
+
+/* Mark as Completed Button */
+.task form {
+    margin-top: 10px;
+}
+.task button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.task button:hover {
+    background-color: #0056b3;
+}
+
+/* Completed Label */
+.completed-label {
+    color: #28a745;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
